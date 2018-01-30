@@ -360,6 +360,8 @@
 			<!-- VMware vSphere spawns child processes to svtres.exe and csc.exe, currently unable to exclude those child processes, csc and cvtres.exe are used by some malware-->
 			<ParentCommandLine condition="contains">C:\Program Files (x86)\VMware\Infrastructure\Virtual Infrastructure Client\Launcher\VpxClient.exe</ParentCommandLine> <!--VMware vSphere spawns subprocesses-->
 			<CommandLine condition="contains">C:\Program Files (x86)\VMware\Infrastructure\Virtual Infrastructure Client\Launcher\VpxClient.exe</CommandLine><!--VMware vSphere spawns subprocesses-->
+			<!--Monitoring: Sensu-->
+			<CurrentDirectory condition="is">C:\opt\sensu\bin\</CurrentDirectory>
 			<ParentImage condition="is">C:\Program Files (x86)\SyncedTool\bin\agent_service.exe</ParentImage><!--eFolder Synced Tool-->
 			<Image condition="is">C:\Program Files (x86)\Notepad++\notepad++.exe</Image><!-- Notepad++ -->
 			<Image condition="is">C:\Program Files\OpenVPN\bin\openvpn-gui.exe</Image>
